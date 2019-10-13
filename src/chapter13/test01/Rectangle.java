@@ -1,6 +1,8 @@
 package chapter13.test01;
 
-public class Rectangle extends Shape {
+import chapter14.test01.Plane2D;
+
+public class Rectangle extends Shape implements Plane2D {
     private int widch;
     private int height;
 
@@ -43,5 +45,10 @@ public class Rectangle extends Shape {
                 System.out.print('*');
             System.out.println();
         }
+    }
+
+    @Override
+    public int getArea() {
+        return widch * height;
     }
 }
